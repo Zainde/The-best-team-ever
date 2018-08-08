@@ -30,7 +30,8 @@ body {
     grid-template-columns: repeat(12, 1fr);
     /* margin: 16px; */
     max-width: 1200px;
-    margin: 16px auto;    padding: 16px;
+    margin: 16px auto;    
+    padding: 16px;
     background: url("../media/pictures/Y1130428.jpg") no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -85,6 +86,8 @@ body {
 
 /* DEBUG CLASSES END */
 .highlight_wrapper {
+    max-width: 1200px;
+    margin: 16px auto;
  display: grid;
  grid-template-columns: repeat(5, 1fr);
 background-color: var(--dividerColor);
