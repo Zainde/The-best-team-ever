@@ -1,0 +1,19 @@
+/* Insert all the styles */
+
+.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.highlight_wrapper {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+
+}
+
+.highlight_small{
+
+}
+
+.highlight_big{
+
+}
