@@ -3,3 +3,72 @@
 .shadow {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    background-color: var(--colorBack);
+    font-family: var(--font);
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+  width: 100%;  
+}
+
+figure {
+  width: 100%; 
+  margin: 0;  
+}
+
+figure img {
+  width: 100%;  
+}
+
+/* Definer grid */
+.header-grid {
+    display: grid;
+    grid-template-columns: 1vmin repeat(1, 12fr) 1vmin;
+    grid-template-rows: auto;
+    padding: 0 0.5vmin;  
+
+}
+
+.header-logo {
+    background-image: url(../media/pictures/logo.png);
+    background-repeat: no-repeat; 
+    grid-column: 2 / 4; 
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+.nav-grid-mobil {
+    grid-column: 8 / 14; 
+}
+       
+}
+    /* Slut min: 768 */
+
+@media only screen and (min-width: 768px) {
+.nav-pc {
+        display: grid;
+        grid-template-columns: 1vmin repeat(12, 1fr) 1vmin;
+        grid-template-rows: auto;
+        padding: 0 0.5vmin; 
+}
+    
+}
+/* Slut min: 768 */
