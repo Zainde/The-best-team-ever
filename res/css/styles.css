@@ -1,5 +1,21 @@
 /* Insert all the styles */
-
+:root {
+    --lightPrimaryColor: #dcedc8;
+    --primaryColor: #7cb342;
+    --darkPrimaryColor: #558b2f;
+    --accentColor: #ff6e40;
+    --text: #ffffff;
+    --primaryText: #212121;
+    --secondaryText: #737373;
+    --dividerColor: #dbdbdb;
+    --background: #fafafa;
+}
 .shadow {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+footer {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    background: 
 }
