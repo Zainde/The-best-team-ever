@@ -1,4 +1,7 @@
 /* Insert all the styles */
+
+
+=======
 :root {
     --lightPrimaryColor: #dcedc8;
     --primaryColor: #7cb342;
@@ -18,6 +21,7 @@ body {
 .shadow {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
 
 /* HERO AREA START */
 
@@ -80,6 +84,34 @@ body {
 }
 
 /* DEBUG CLASSES END */
+.highlight_wrapper {
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+background-color: var(--dividerColor);
+color: var(--text);
+grid-gap: 16px;
+padding: 16px;
+}
+
+.highlight_wrapper article img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+    margin-bottom: -5px;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .highlight_wrapper {
+   grid-template-columns: repeat(2, 1fr);
+  }
+
+.highlight_big{
+grid-column: span 2;
+}
+
+
+}
 
 footer {
     display: grid;
