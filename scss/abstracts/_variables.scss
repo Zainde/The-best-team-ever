@@ -1,0 +1,19 @@
+// Global variables and bridge between fontsetup/colorsetup
+// !!Must be included after these partials
+
+
+// Calculate responsive font-size 
+$font-selector: 'norm';
+$font-size-base: 16; 
+$screen-size-min: 320; 
+$screen-size-max: 1536;
+
+// Define grids
+$selector: "" ;
+$grid-fraction: 12;
+$grid-template-rows: null;
+$grid-column-gap: null;
+$grid-background-color: inherit; 
+
+
+

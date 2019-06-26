@@ -1,0 +1,31 @@
+// Colors 
+
+
+
+$lightPrimaryColor: #dcedc8;
+$primaryColor: #7cb342;
+$darkPrimaryColor: #558b2f;
+$accentColor: #ff6e40;
+$text: #ffffff;
+$primaryText: #212121;
+$secondaryText: #737373;
+$dividerColor: #dbdbdb;
+$background: #fafafa; 
+
+// color-back er kun synlig mellem afsnit på siden (margin)
+$color-back: #f0f0f0; 
+$color-back-op23: #f0f0f023; 
+// color-fonts 
+$color-font-norm: #0f0f0f; 
+$color-font-head: #0f0f0f; 
+
+$color-border-img: #0f0f0f; 
+$color-border-nav: #0f0f0f; 
+$nav-color-back: #00ff00;
+$head-color-back: #00ff00;
+
+
+
+
+// Bridge til variabler i mixins 
+$default-border-color: $color-border-img;

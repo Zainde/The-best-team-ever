@@ -1,0 +1,250 @@
+/* Insert all the styles */
+@import 'base/fontsetup';
+@import 'base/colorsetup';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color-font-norm;
+    font-family: $font-family-norm;
+    font-weight: $font-weight-norm;
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    background-color: $color-back; 
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1 {
+    $font-selector: 'h1'; 
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    font-weight: $font-weight-norm; 
+     
+}
+h2 {
+    $font-selector: 'h2'; 
+    font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    font-weight: $font-weight-norm; 
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+@import 'layouts/navigation'; 
+
+@import 'layouts/header'; 
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+  width: 100%;  
+}
+
+figure {
+  width: 100%; 
+  margin: 0;  
+}
+
+figure img {
+  width: 100%;  
+}
+
+/* Definer grid */
+.header-grid {
+    @include grid-def ($grid-fraction, $grid-template-rows, $grid-column-gap, $grid-background-color) {
+        // Place optinal content to grid 
+        grid-template-columns: 1vmin repeat(12, 1fr) 1vmin;
+        grid-template-rows: auto;
+    }
+    padding: 0 0.5vmin;  
+
+}
+
+.header-logo {
+    background-image: url(../media/pictures/logo.png);
+    background-repeat: no-repeat; 
+    grid-column: 2 / 4; 
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+.nav-grid-mobil {
+    grid-column: 8 / 14; 
+}
+       
+}
+    /* Slut min: 768 */
+
+@media only screen and (min-width: 768px) {
+.nav-pc {
+    @include grid-def ($grid-fraction, $grid-template-rows, $grid-column-gap, $grid-background-color) {
+        // Place optinal content to grid 
+        grid-template-columns: 1vmin repeat(12, 1fr) 1vmin;
+        grid-template-rows: auto;
+    }
+        // display: grid;
+        // grid-template-columns: 1vmin repeat(12, 1fr) 1vmin;
+        // grid-template-rows: auto;
+        padding: 0 0.5vmin; 
+}
+    
+}
+/* Slut min: 768 */
+
+/* HERO AREA START */
+
+.hero-area {
+
+    // Definer grid 
+
+@include grid-def ($grid-fraction, $grid-template-rows, $grid-column-gap, $grid-background-color) {
+    // Place optinal content to grid 
+    // grid-template-columns: 1fr 30vw 20vw 1fr;
+}
+    
+    max-width: 1200px;
+    margin: 16px auto;    
+    padding: 16px;
+    background: url("../media/pictures/Y1130428.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    /* background-size: 100%; */
+    /* background: url(res/media/pictures/Y1120409.jpg); */
+    .half {
+        grid-column: span 6;
+        /* display: grid; */
+    }
+
+    .two-third {
+        grid-column: span 8;
+        /* display: grid; */
+    }
+    
+    .one-third {
+        grid-column: span 4;
+        /* display: grid; */
+    }
+
+    .bg-color {
+        background-color: $color-back-op23;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    
+    .text-color {
+        color: $text;
+         // font-size: 1.5rem;
+        // $font-selector: 1.5;  
+        font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+    }
+    
+    .headline {
+        // font-size: 5rem;
+        $font-selector: "h1"; 
+        font-size: calc-resp-font($font-selector, $font-size-base, $screen-size-min, $screen-size-max);
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// .hero-area .half {
+//     grid-column: span 6;
+//     /* display: grid; */
+// }
+
+// .hero-area .two-third {
+//     grid-column: span 8;
+//     /* display: grid; */
+// }
+
+// .hero-area .one-third {
+//     grid-column: span 4;
+//     /* display: grid; */
+// }
+
+
+
+/* HERO AREA END */
+
+
+/* DEBUG CLASSES START */ 
+
+.dg-border {
+    border: 1px solid red;
+}
+
+.dg-red-color {
+    background: green;
+}
+
+/* DEBUG CLASSES END */
+.highlight_wrapper {
+    max-width: 1200px;
+    margin: 16px auto;
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+background-color: $dividerColor;
+color: $text;
+grid-gap: 16px;
+padding: 16px;
+}
+
+.highlight_wrapper article img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+    margin-bottom: -5px;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .highlight_wrapper {
+   grid-template-columns: repeat(2, 1fr);
+  }
+
+.highlight_big{
+grid-column: span 2;
+}
+
+
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    color: $text;
+    background: $primaryColor;
+    padding: 15px;
+}
+@media screen and (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+  }
+  footer a {
+      color: $text;
+      text-decoration: none;
+  }
+  footer a:hover {
+    color: $primaryText;
+}
+
